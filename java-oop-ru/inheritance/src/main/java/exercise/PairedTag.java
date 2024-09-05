@@ -10,8 +10,7 @@ public class PairedTag extends Tag {
     private final List<Tag> tags;
 
     PairedTag(String tagName, Map<String, String> map, String text, List<Tag> tags) {
-        this.tagName = tagName;
-        this.map = map;
+        super(tagName, map);
         this.text = text;
         this.tags = tags;
     }
