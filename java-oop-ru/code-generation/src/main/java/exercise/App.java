@@ -19,8 +19,9 @@ public class App {
 
     @SneakyThrows
     public static void save(Path path, Car car) {
-        FileWriter writer = new FileWriter(String.valueOf(path), true);
+        FileWriter writer = new FileWriter(path.toFile(), true);
         writer.write(car.serialize());
+        writer.close();
     }
 
     public static Car extract(Path path) throws IOException {
