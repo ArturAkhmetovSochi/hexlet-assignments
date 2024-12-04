@@ -12,4 +12,5 @@ import lombok.Getter;
 public class UsersPage {
     private List<User> users;
 }
+
 // END

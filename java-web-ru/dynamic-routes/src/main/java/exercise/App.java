@@ -22,19 +22,22 @@ public final class App {
         });
 
         // BEGIN
+        Map<String, String> result = new HashMap<>();
+
         app.get("/companies/{id}", ctx -> {
             var id = ctx.pathParam("id");
 
-            Map<String, String> result = new HashMap<>();
+            var number = 0;
+            for (var company: COMPANIES) {
 
-            for (Map<String, String> company : COMPANIES) {
-                if (company.containsValue(id)) {
+                if (company.get("id").equals(id)) {
+                number ++;
                 result.putAll(company);
+                    }
                 }
-            }
 
-            if (result.isEmpty()) {
-                throw new NotFoundResponse("Company not found");
+            if (number == 0) {
+                    throw new NotFoundResponse("Company not found");
             }
 
             ctx.json(result);

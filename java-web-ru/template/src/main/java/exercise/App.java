@@ -1,16 +1,17 @@
 package exercise;
 
 import io.javalin.Javalin;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.stream.Stream;
+
+import io.javalin.http.Context;
 import io.javalin.http.NotFoundResponse;
 import exercise.model.User;
 import exercise.dto.users.UserPage;
 import exercise.dto.users.UsersPage;
 import static io.javalin.rendering.template.TemplateUtil.model;
 import io.javalin.rendering.template.JavalinJte;
+import org.jetbrains.annotations.NotNull;
 
 public final class App {
 
@@ -25,24 +26,26 @@ public final class App {
         });
 
         // BEGIN
-        app.get("/users", ctx -> {
-            UsersPage usersPage = new UsersPage(USERS);
-            ctx.render("users/index.jte", Collections.singletonMap("usersPage", usersPage));
+        app.get("/users/{id}", ctx -> {
+            var id = ctx.pathParamAsClass("id", Long.class).get();
+            User user = USERS.stream()
+                    .filter(u -> id.equals(u.getId()))
+                    .findFirst()
+                    .orElse(null);
+
+            if (user == null) {
+                throw new NotFoundResponse("User not found");
+            }
+
+            var page = new UserPage(user);
+            ctx.render("users/show.jte", model("page", page));
         });
 
-        app.get("/users/{id}", ctx -> {
-            Long id = ctx.pathParamAsClass("id", Long.class).get();
+        app.get("/users", ctx -> {
+            var page = new UsersPage(USERS);
+            ctx.render("users/index.jte", model("page", page));
 
-            User user = USERS.stream()
-                    .filter(user1 -> id.equals(user1.getId()))
-                    .findFirst()
-                    .orElseThrow(() -> new NotFoundResponse("User not found"));
-
-            UserPage userPage = new UserPage(user);
-
-            ctx.render("users/show.jte", Collections.singletonMap("userPage", userPage));
-                    });
-
+        });
         // END
 
         app.get("/", ctx -> {
@@ -56,4 +59,5 @@ public final class App {
         Javalin app = getApp();
         app.start(7070);
     }
+
 }

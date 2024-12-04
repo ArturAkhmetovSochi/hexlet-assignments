@@ -1,5 +1,5 @@
-@import exercise.dto.users.UserPage
-@param UserPage page
+@import gg.jte.Content
+@param Content content
 
 <html lang="en">
   <head>
@@ -10,13 +10,12 @@
             integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
             crossorigin="anonymous">
     <title>Hello Hexlet!</title>
-  </head>
-  <body>
-    <div class="mx-auto p-4 py-md-5">
-      <main>
-        <h2>${page.getUser().getFirstName()} ${page.getUser().getLastName()}</h2>
-        <div>${page.getUser().getEmail()}</div>
-      </main>
-    </div>
-  </body>
+    </head>
+    <body>
+        <div class="mx-auto p-4 py-md-5">
+        <main>
+          ${content}
+        </main>
+        </div>
+    </body>
 </html>

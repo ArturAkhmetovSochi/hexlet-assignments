@@ -1,25 +1,26 @@
 package exercise;
+import io.javalin.Javalin;
 
 // BEGIN
-import io.javalin.Javalin;
+
 // END
+
 public final class App {
 
     public static Javalin getApp() {
 
-        // BEGIN
         var app = Javalin.create(config -> {
             config.bundledPlugins.enableDevLogging();
         });
-        // Описываем, что загрузится по адресу /
+
         app.get("/welcome", ctx -> ctx.result("Welcome to Hexlet!"));
 
         return app;
-        // END
     }
+        // END
 
     public static void main(String[] args) {
-        Javalin app = getApp();
+        Javalin app = App.getApp();
         app.start(7070);
     }
 }
