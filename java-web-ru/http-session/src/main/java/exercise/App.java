@@ -18,10 +18,10 @@ public final class App {
         app.get("/users", ctx -> {
             var page = ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
             var per = ctx.queryParamAsClass("per", Integer.class).getOrDefault(5);
-            var numberOfPages = USERS.size() / per;
-            var begin = USERS.size() / numberOfPages * (page - 1);
-            var end = USERS.size() / numberOfPages * (page - 1) + per;
-            ctx.json(USERS.subList(begin, end));
+
+            int begin = (page - 1) * per;
+            List<Map<String, String>> Users = USERS.subList(begin, begin + per);
+            ctx.json(Users);
         });
         // END
 
