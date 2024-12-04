@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AppTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AppTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/exercise.html">exercise</a> &gt; AppTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.619s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testListUsers()</td>
+<td class="success">0.509s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testListUsers1()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testListUsers2()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testRootPage()</td>
+<td class="success">0.094s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/users]
+[Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/]
+[Test worker] INFO io.javalin.Javalin - Starting Javalin ...
+[Test worker] INFO org.eclipse.jetty.server.Server - jetty-11.0.20; built: 2024-01-29T21:04:22.394Z; git: 922f8dc188f7011e60d0361de585fd4ac4d63064; jvm 20.0.1+9-29
+[Test worker] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5ba03c82{/,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@74f827ad{HTTP/1.1, (http/1.1)}{0.0.0.0:33861}
+[Test worker] INFO org.eclipse.jetty.server.Server - Started Server@4d0e54e0{STARTING}[11.0.20,sto=0] @580ms
+[Test worker] INFO io.javalin.Javalin - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+[Test worker] INFO io.javalin.Javalin - Javalin started in 90ms \o/
+[Test worker] INFO io.javalin.Javalin - Listening on http://localhost:33861/
+[Test worker] INFO io.javalin.Javalin - You are running Javalin 6.1.3 (released March 2, 2024. Your Javalin version is 275 days old. Consider checking for a newer version.).
+[JettyServerThreadPool-48] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/users]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@2cc61985
+    Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:33861, Accept-Encoding=gzip}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 331.69 ms
+    Headers: {Content-Encoding=gzip, Date=Tue, 03 Dec 2024 11:07:10 GMT, Content-Type=text/html}
+    Body is gzipped (9767 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-33] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/users]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@26370e63
+    Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:33861, Accept-Encoding=gzip}
+    Cookies: {}
+    Body: 
+    QueryString: term=s
+    QueryParams: {term=[s]}
+    FormParams: {}
+Response: [200 OK], execution took 2.63 ms
+    Headers: {Content-Encoding=gzip, Date=Tue, 03 Dec 2024 11:07:11 GMT, Content-Type=text/html}
+    Body is gzipped (1726 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-39] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/users]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@4b67cec1
+    Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:33861, Accept-Encoding=gzip}
+    Cookies: {}
+    Body: 
+    QueryString: term=WI
+    QueryParams: {term=[WI]}
+    FormParams: {}
+Response: [200 OK], execution took 0.76 ms
+    Headers: {Date=Tue, 03 Dec 2024 11:07:11 GMT, Content-Type=text/html}
+    Body is 1423 bytes (starts on next line):
+    
+
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css&quot;
+            rel=&quot;stylesheet&quot;
+            integrity=&quot;sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We&quot;
+            crossorigin=&quot;anonymous&quot;&gt;
+    &lt;title&gt;Hello Hexlet!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;mx-auto p-4 py-md-5&quot;&gt;
+        &lt;main&gt;
+          
+        &lt;h1&gt;Пользователи&lt;/h1&gt;
+        &lt;form action=&quot;/users&quot; method=&quot;get&quot;&gt;
+        &lt;input type=&quot;search&quot; name=&quot;term&quot; value=&quot;WI&quot; /&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Search&quot; /&gt;
+        &lt;/form&gt;
+
+        &lt;table class=&quot;table table-striped&quot;&gt;
+            
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        23
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        Will
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        Casper
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        27
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        Willis
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        Jast
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            
+        &lt;/table&gt;
+    
+        &lt;/main&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-48] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@7e3152b1
+    Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:33861, Accept-Encoding=gzip}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 91.48 ms
+    Headers: {Date=Tue, 03 Dec 2024 11:07:11 GMT, Content-Type=text/html}
+    Body is 605 bytes (starts on next line):
+    
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css&quot;
+            rel=&quot;stylesheet&quot;
+            integrity=&quot;sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We&quot;
+            crossorigin=&quot;anonymous&quot;&gt;
+    &lt;title&gt;Hello Hexlet!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;mx-auto p-4 py-md-5&quot;&gt;
+        &lt;main&gt;
+          
+        &lt;a href=&quot;/users&quot;&gt;Пользователи&lt;/a&gt;
+    
+        &lt;/main&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+----------------------------------------------------------------------------------
+[Test worker] INFO io.javalin.Javalin - Stopping Javalin ...
+[Test worker] INFO org.eclipse.jetty.server.Server - Stopped Server@4d0e54e0{STOPPING}[11.0.20,sto=0]
+[Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@74f827ad{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5ba03c82{/,null,STOPPED}
+[Test worker] INFO io.javalin.Javalin - Javalin has stopped
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.3</a> at 3 дек. 2024 г., 14:07:11</p>
+</div>
+</div>
+</body>
+</html>

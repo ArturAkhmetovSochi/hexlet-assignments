@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="exercise.AppTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-11-04T14:34:50" hostname="artur-Aspire-A515-57" time="0.296">
+  <properties/>
+  <testcase name="testDomains()" classname="exercise.AppTest" time="0.289"/>
+  <testcase name="testPhones()" classname="exercise.AppTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/phones]
+[Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/domains]
+[Test worker] INFO io.javalin.Javalin - Starting Javalin ...
+[Test worker] INFO org.eclipse.jetty.server.Server - jetty-11.0.20; built: 2024-01-29T21:04:22.394Z; git: 922f8dc188f7011e60d0361de585fd4ac4d63064; jvm 20.0.1+9-29
+[Test worker] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1c30cb85{/,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@40d52be7{HTTP/1.1, (http/1.1)}{0.0.0.0:46777}
+[Test worker] INFO org.eclipse.jetty.server.Server - Started Server@f171912{STARTING}[11.0.20,sto=0] @583ms
+[Test worker] INFO io.javalin.Javalin - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+[Test worker] INFO io.javalin.Javalin - Javalin started in 107ms \o/
+[Test worker] INFO io.javalin.Javalin - Listening on http://localhost:46777/
+[Test worker] INFO io.javalin.Javalin - You are running Javalin 6.1.3 (released March 2, 2024. Your Javalin version is 246 days old. Consider checking for a newer version.).
+[JettyServerThreadPool-48] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/domains]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@464fe2e9
+    Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:46777, Accept-Encoding=gzip}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 12.04 ms
+    Headers: {Date=Mon, 04 Nov 2024 14:34:50 GMT, Content-Type=application/json}
+    Body is 134 bytes (starts on next line):
+    ["cole.org","bernhard.com","mohr.io","schiller.name","nicolas.biz","wolff.net","beatty.name","kohler.io","herzog.io","schroeder.info"]
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-33] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/phones]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@421d2752
+    Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:46777, Accept-Encoding=gzip}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 0.63 ms
+    Headers: {Date=Mon, 04 Nov 2024 14:34:50 GMT, Content-Type=application/json}
+    Body is 163 bytes (starts on next line):
+    ["(352) 773-9574","1-540-507-9625","817-502-5462","602-801-8382","850-936-2032","(260) 252-5682","(513) 701-6308","(973) 336-0431","(410) 571-7939","979.564.8700"]
+----------------------------------------------------------------------------------
+[Test worker] INFO io.javalin.Javalin - Stopping Javalin ...
+[Test worker] INFO org.eclipse.jetty.server.Server - Stopped Server@f171912{STOPPING}[11.0.20,sto=0]
+[Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@40d52be7{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1c30cb85{/,null,STOPPED}
+[Test worker] INFO io.javalin.Javalin - Javalin has stopped
+]]></system-err>
+</testsuite>
