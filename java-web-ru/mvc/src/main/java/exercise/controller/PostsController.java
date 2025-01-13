@@ -54,7 +54,7 @@ public class PostsController {
             .orElseThrow(() -> new NotFoundResponse("Post not found"));
 
         var page = new PostPage(post);
-        ctx.render("posts/show.jte", model("page", page));
+        ctx.render("posts/show.jte/home/artur/Hexlet/hexlet-assignments/java-web-ru/cookies", model("page", page));
     }
 
     // BEGIN
@@ -64,7 +64,7 @@ public class PostsController {
         var post = PostRepository.find(id)
                 .orElseThrow(() -> new NotFoundResponse("Entity with id = " + id + " not found"));
         var page = new EditPostPage(id, post.getName(), post.getBody(), null);
-        ctx.render("posts/edit.jte", model("page", page));
+        ctx.render("posts/edit.jte/home/artur/Hexlet/hexlet-assignments/java-web-ru/cookies", model("page", page));
     }
 
     public static void update(Context ctx) {
