@@ -2,6 +2,7 @@ package exercise.controller;
 
 import static io.javalin.rendering.template.TemplateUtil.model;
 
+import exercise.dto.BasePage;
 import exercise.dto.posts.PostPage;
 import exercise.dto.posts.PostsPage;
 import exercise.model.Post;
@@ -20,6 +21,13 @@ public class PostsController {
     }
 
     // BEGIN
+
+    public static void index(Context ctx) {
+        var posts = PostRepository.getEntities();
+        var page = new PostsPage(posts);
+        page.setFlash(ctx.consumeSessionAttribute("flash"));
+        ctx.render("posts/index.jte", model("page", page));
+    }
 
     public static void create(Context ctx) {
 
@@ -40,17 +48,11 @@ public class PostsController {
             var name = ctx.formParam("name");
             var body = ctx.formParam("body");
             var page = new BuildPostPage(name, body, e.getErrors());
-            ctx.render("posts/build.jte", model("page", page)).status(422);
+            ctx.render("posts/build.jte", model("page", page));
         }
 
     }
 
-    public static void index(Context ctx) {
-        var posts = PostRepository.getEntities();
-        var page = new PostsPage(posts);
-        page.setFlash(ctx.consumeSessionAttribute("flash"));
-        ctx.render("posts/index.jte", model("page", page));
-    }
     // END
 
     public static void show(Context ctx) {

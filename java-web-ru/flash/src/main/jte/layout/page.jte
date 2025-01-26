@@ -1,7 +1,8 @@
 <!-- BEGIN -->
-@import exercise.util.NamedRoutes
 @import exercise.dto.BasePage
 @import gg.jte.Content
+@import exercise.util.NamedRoutes
+
 @param Content content
 @param BasePage page = null
 
@@ -19,4 +20,3 @@
         ${content}
     </body>
 </html>
-<!-- END -->
